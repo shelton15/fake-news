@@ -38,7 +38,7 @@ body {
   background-color: #293846;
 }
 
-.SidebarList .row #active {
+.SidebarList #active {
   background-color: #293846;
 }
 
