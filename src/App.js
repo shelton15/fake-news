@@ -1,5 +1,5 @@
 import './App.css';
-import { Space } from "antd";
+import Grid from '@mui/material/Grid';
 import AppFooter from './Components/AppFooter';
 import AppHeader from './Components/AppHeader';
 import PageContent from './Components/PageContent';
@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <AppHeader/>
-      <Space>
-        <Sidebar></Sidebar>
-        <PageContent></PageContent>
-      </Space>
+        <Grid>
+          <Sidebar></Sidebar>
+          <PageContent></PageContent>
+        </Grid>
       <AppFooter/>
     </div>
   );
