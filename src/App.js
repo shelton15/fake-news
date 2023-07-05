@@ -1,5 +1,5 @@
 import React from "react";
-import Sidenav from "./Components/Sidenav";
+// import Sidenav from "./Components/Sidenav";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
