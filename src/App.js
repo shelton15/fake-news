@@ -1,11 +1,11 @@
-import './App.css';
+import React from "react";
+import Sidenav from "./Components/Sidenav";
 
 
-function App() {
+export default function App() {
   return (
     <div>
+      <Sidenav/>
     </div>
-  );
+  )
 }
-
-export default App;
