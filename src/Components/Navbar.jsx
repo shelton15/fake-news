@@ -172,6 +172,7 @@ export default function Navbar() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={()=>updateOpen(!dopen)}
           >
             <MenuIcon />
           </IconButton>

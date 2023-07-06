@@ -68,18 +68,18 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function Sidenav() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  // const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
-  const updateOpen = useAppStore((state) => state.updateOpen);
-  const dopen = useAppStore((state) => state.dopen);
+  // const updateOpen = useAppStore((state) => state.updateOpen);
+  const open = useAppStore((state) => state.dopen);
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      
+      <Box height={30}/>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={()=>setOpen(!open)}>
+          <IconButton >
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
