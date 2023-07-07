@@ -58,12 +58,14 @@ export default function Home() {
             <ul>
               {files.map((file, index) => (
                 <li key={index}>
-                  <img
-                    src={file.preview}
-                    alt={file.name}
-                    onClick={() => handlePreviewClick(file)}
-                  />
-                  <p>{file.name}</p>
+                  <div className="preview-image">
+                    <img
+                      src={file.preview}
+                      alt={file.name}
+                      onClick={() => handlePreviewClick(file)}
+                    />
+                    <p>{file.name}</p>
+                  </div>
                   <button onClick={() => handleRemove(file)}>Remove</button>
                 </li>
               ))}
@@ -85,13 +87,13 @@ export default function Home() {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "right",
           alignItems: "center",
-          height: "calc(100vh - 130px)", // adjust this to suit your needs
+          height: "calc(100vh - 150px)", // adjust this to suit your needs
         }}
       >
         <Sidenav />
-        <Dropzone />
+        <Dropzone sx={{marginLeft: 50}} />
         {selectedFile && (
           <div className="modal">
             <div className="modal-content">
