@@ -89,7 +89,7 @@ export default function Home() {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "right",
+          justifyContent: "left",
           alignItems: "center",
           height: "calc(100vh - 150px)", // adjust this to suit your needs
         }}
