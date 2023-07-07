@@ -12,9 +12,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import {useNavigate} from "react-router-dom";
 import { useAppStore } from '../appStore';
+import HomeIcon from '@mui/icons-material/Home';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 
 const drawerWidth = 240;
@@ -100,12 +103,12 @@ export default function Sidenav() {
                     justifyContent: 'center',
                   }}
                 >
-                  <InboxIcon /> 
+                  <HomeIcon /> 
                 </ListItemIcon>
                 <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/about")}}>
+            <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/dashboard")}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -120,9 +123,9 @@ export default function Sidenav() {
                     justifyContent: 'center',
                   }}
                 >
-                  <InboxIcon /> 
+                  <DashboardIcon /> 
                 </ListItemIcon>
-                <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/settings")}}>
@@ -140,7 +143,7 @@ export default function Sidenav() {
                     justifyContent: 'center',
                   }}
                 >
-                  <InboxIcon /> 
+                  <SettingsIcon /> 
                 </ListItemIcon>
                 <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

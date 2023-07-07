@@ -12,7 +12,7 @@ export default function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home/>}></Route>
-        <Route path="/about" exact element={<About/>}></Route>
+        <Route path="/dashboard" exact element={<About/>}></Route>
         <Route path="/settings" exact element={<Settings/>}></Route>
       </Routes>
       </BrowserRouter>
