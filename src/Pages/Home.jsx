@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Box height={30} />
+      <Box height={20} />
       <Box
         sx={{
           display: "flex",
@@ -95,7 +95,7 @@ export default function Home() {
         }}
       >
         <Sidenav />
-        <Dropzone sx={{marginLeft: 50}} />
+        <Dropzone sx={{marginLeft: 10}} />
         {selectedFile && (
           <div className="modal">
             <div className="modal-content">
