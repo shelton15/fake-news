@@ -33,10 +33,10 @@
     margin: 10px;
   }
   
-  .dropzone img {
+  /* .dropzone img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
-  }
+  } */

@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Sidenav from "../Components/Sidenav";
 import { Box } from "@mui/material";
 import { useDropzone } from "react-dropzone";
-import "./Home.css";
+// import "./Home.css";
 
 export default function Home() {
   const Dropzone = ({ onDrop }) => {
@@ -31,9 +31,15 @@ export default function Home() {
       files.forEach((file) => URL.revokeObjectURL(file.preview));
     }, [files]);
 
+    const handleRemove = (file) => {
+      const newFiles = files.filter((f) => f !== file);
+      setFiles(newFiles);
+      URL.revokeObjectURL(file.preview);
+    };
+
     return (
       <>
-        <div {...getRootProps({ className: "dropzone" })}>
+        <div {...getRootProps()} className="dropzone">
           <input {...getInputProps()} />
           {isDragActive ? (
             <p>Drop files here...</p>
@@ -46,6 +52,8 @@ export default function Home() {
             {files.map((file, index) => (
               <li key={index}>
                 <img src={file.preview} alt={file.name} />
+                <p>{file.name}</p>
+                <button onClick={() => handleRemove(file)}>Remove</button>
               </li>
             ))}
           </ul>
@@ -62,11 +70,14 @@ export default function Home() {
     <>
       <Navbar />
       <Box height={30} />
-      <Box sx={{ display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "calc(100vh - 130px)",
-    }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "calc(100vh - 130px)", // adjust this to suit your needs
+        }}
+      >
         <Sidenav />
         <Dropzone onDrop={handleDrop} />
       </Box>
