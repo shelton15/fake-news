@@ -115,6 +115,7 @@
   }
   
   .preview button {
+    margin-right: 100;
     background-color: #f05a4f;
     color: #fff;
     border: none;

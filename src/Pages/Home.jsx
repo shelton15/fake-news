@@ -30,7 +30,9 @@ export default function Home() {
     });
 
     useEffect(() => {
+        return () => {
       files.forEach((file) => URL.revokeObjectURL(file.preview));
+        };
     }, [files]);
 
     const handleRemove = (file) => {
