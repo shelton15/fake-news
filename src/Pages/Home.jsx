@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Sidenav from "../Components/Sidenav";
 import { Box } from "@mui/material";
 import { useDropzone } from "react-dropzone";
+import "./Home.css";
 
 export default function Home() {
   const Dropzone = ({ onDrop }) => {
@@ -61,11 +62,12 @@ export default function Home() {
     <>
       <Navbar />
       <Box height={30} />
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "calc(100vh - 130px)",
+    }}>
         <Sidenav />
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <h1>Home</h1>
-        </Box>
         <Dropzone onDrop={handleDrop} />
       </Box>
     </>
