@@ -5,7 +5,8 @@
     align-items: center;
     width: 400px;
     height: 400px;
-    margin: 0 auto;
+    margin-right: 10px ;
+    /* margin-left: 30px; */
     background-color: #f5f5f5;
     border: 2px dashed #aaa;
     border-radius: 10px;
@@ -78,7 +79,7 @@ li button:hover {
 .preview {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: -10px;
+    margin-right: 100px;
 }
 
 .preview ul {
