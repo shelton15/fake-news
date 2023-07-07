@@ -3,9 +3,11 @@ import Navbar from "../Components/Navbar";
 import Sidenav from "../Components/Sidenav";
 import { Box } from "@mui/material";
 import { useDropzone } from "react-dropzone";
-// import "./Home.css";
+import "./Home.css";
 
 export default function Home() {
+  const [selectedFile, setSelectedFile] = useState(null);
+
   const Dropzone = ({ onDrop }) => {
     const [files, setFiles] = useState([]);
     const {
@@ -37,6 +39,10 @@ export default function Home() {
       URL.revokeObjectURL(file.preview);
     };
 
+    const handlePreviewClick = (file) => {
+      setSelectedFile(file);
+    };
+
     return (
       <>
         <div {...getRootProps()} className="dropzone">
@@ -48,22 +54,28 @@ export default function Home() {
           )}
         </div>
         {files.length > 0 && (
-          <ul>
-            {files.map((file, index) => (
-              <li key={index}>
-                <img src={file.preview} alt={file.name} />
-                <p>{file.name}</p>
-                <button onClick={() => handleRemove(file)}>Remove</button>
-              </li>
-            ))}
-          </ul>
+          <div className="preview">
+            <ul>
+              {files.map((file, index) => (
+                <li key={index}>
+                  <img
+                    src={file.preview}
+                    alt={file.name}
+                    onClick={() => handlePreviewClick(file)}
+                  />
+                  <p>{file.name}</p>
+                  <button onClick={() => handleRemove(file)}>Remove</button>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </>
     );
   };
 
-  const handleDrop = (acceptedFiles) => {
-    console.log("Files dropped:", acceptedFiles);
+  const handleCloseModal = () => {
+    setSelectedFile(null);
   };
 
   return (
@@ -79,7 +91,15 @@ export default function Home() {
         }}
       >
         <Sidenav />
-        <Dropzone onDrop={handleDrop} />
+        <Dropzone />
+        {selectedFile && (
+          <div className="modal">
+            <div className="modal-content">
+              <img src={selectedFile.preview} alt={selectedFile.name} />
+              <button onClick={handleCloseModal}>Close</button>
+            </div>
+          </div>
+        )}
       </Box>
     </>
   );
