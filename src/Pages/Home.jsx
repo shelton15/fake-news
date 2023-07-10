@@ -57,6 +57,13 @@ export default function Home() {
             </p>
           )}
         </div>
+
+        <div>
+            <ul>
+            <button className="verify-button">Verify News</button>
+            </ul>
+          </div>
+          
         {files.length > 0 && (
           <div className="preview">
             <ul>
@@ -106,12 +113,6 @@ export default function Home() {
             </div>
           </div>
         )}
-
-        <div>
-          <ul>
-          <button className="verify-button">Verify News</button>
-          </ul>
-        </div>
       </Box>
     </>
   );
