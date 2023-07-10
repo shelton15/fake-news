@@ -177,18 +177,18 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Box
+          <Box
             component="div"
-            href="./assets/checkam.jpg"
+            // src="./images/checkam.jpg"
             sx={{
-              width: '28px',
-              height: '28px',
-              // backgroundImage: 'url(../checkam.jpg)',
+              width: '50px',
+              height: '50px',
+              backgroundImage: 'url(./images/notext.jpg)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
-              marginRight: '16px',
+              marginRight: '10px',
             }}
-          /> */}
+          />
           <Typography
             variant="h6"
             noWrap
