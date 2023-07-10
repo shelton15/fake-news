@@ -106,6 +106,12 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        <div>
+          <ul>
+          <button className="verify-button">Verify News</button>
+          </ul>
+        </div>
       </Box>
     </>
   );
