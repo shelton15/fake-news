@@ -30,9 +30,9 @@ export default function Home() {
     });
 
     useEffect(() => {
-        return () => {
-      files.forEach((file) => URL.revokeObjectURL(file.preview));
-        };
+      return () => {
+        files.forEach((file) => URL.revokeObjectURL(file.preview));
+      };
     }, [files]);
 
     const handleRemove = (file) => {
@@ -52,7 +52,9 @@ export default function Home() {
           {isDragActive ? (
             <p>Drop files here...</p>
           ) : (
-            <p>Drag and drop files here, or click to select files</p>
+            <p>
+              Drag and drop files here, or click to select files
+            </p>
           )}
         </div>
         {files.length > 0 && (
