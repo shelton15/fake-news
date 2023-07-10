@@ -4,7 +4,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
+import Typography from '@mui/material/Typography';
 // import InputBase from '@mui/material/InputBase';
 // import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
@@ -177,7 +177,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Box
+          {/* <Box
             component="div"
             href="./assets/checkam.jpg"
             sx={{
@@ -188,18 +188,22 @@ export default function Navbar() {
               backgroundSize: 'contain',
               marginRight: '16px',
             }}
-          />
-          {/* <Typography
+          /> */}
+          <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: "flex",
             justifyContent: "right",
             alignItems: "center",
+            fontFamily: 'monospace',
+            fontWeight: 700,
+            letterSpacing: '.3rem',
+            textDecoration: 'none',
             }}
           >
             CheckAm 
-          </Typography> */}
+          </Typography>
           {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
