@@ -179,10 +179,11 @@ export default function Navbar() {
           </IconButton>
           <Box
             component="div"
+            href="./assets/checkam.jpg"
             sx={{
               width: '28px',
               height: '28px',
-              backgroundImage: 'url(../checkam.jpg)',
+              // backgroundImage: 'url(../checkam.jpg)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
               marginRight: '16px',
