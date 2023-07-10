@@ -4,7 +4,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 // import InputBase from '@mui/material/InputBase';
 // import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 // import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useAppStore } from '../appStore';
+// import { Avatar } from '@mui/material';
 
 const AppBar = styled(MuiAppBar, {
   })(({ theme }) => ({
@@ -176,7 +177,18 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+          <Box
+            component="div"
+            sx={{
+              width: '28px',
+              height: '28px',
+              backgroundImage: 'url(../checkam.jpg)',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'contain',
+              marginRight: '16px',
+            }}
+          />
+          {/* <Typography
             variant="h6"
             noWrap
             component="div"
@@ -186,7 +198,7 @@ export default function Navbar() {
             }}
           >
             CheckAm 
-          </Typography>
+          </Typography> */}
           {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
