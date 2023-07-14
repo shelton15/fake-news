@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './LoginForm.css';
 import { AuthContext } from '../context/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -30,6 +31,7 @@ const LoginForm = () => {
         <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
         <button type="submit">Login</button>
       </form>
+      <p>Don't have an account? <Link to="/register">Register</Link></p>
     </div>
   );
 };

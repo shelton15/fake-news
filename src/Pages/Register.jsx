@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import './Register.css';
 import { AuthContext } from '../context/AuthProvider';
+import { Link } from 'react-router-dom';
+
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -37,6 +39,7 @@ const Register = () => {
             <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
             <button type="submit">Register</button>
         </form>
+      <p>Already have an Account? <Link to="/login">Login</Link></p>
     </div>
   );
 };
