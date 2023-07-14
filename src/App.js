@@ -4,6 +4,8 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Settings from "./Pages/Settings";
+import  LoginForm  from "./Pages/LoginForm";
+import Register from "./Pages/Register";
 
 
 export default function App() {
@@ -14,6 +16,8 @@ export default function App() {
         <Route path="/" exact element={<Home/>}></Route>
         <Route path="/dashboard" exact element={<About/>}></Route>
         <Route path="/settings" exact element={<Settings/>}></Route>
+        <Route path="/login" exact element={<LoginForm/>}></Route>
+        <Route path="/register" exact element={<Register/>}></Route>
       </Routes>
       </BrowserRouter>
     </>
