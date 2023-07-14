@@ -26,11 +26,11 @@ const Register = () => {
   return (
     <form onSubmit={handleSubmit} className="register-form">
       <label>Username</label>
-      <input type="text" value={username} onChange={handleUsernameChange} placeholder="Enter your username" />
+      <input type="text" value={username} onChange={handleUsernameChange} placeholder="Username" />
       <label>Email</label>
-      <input type="email" value={email} onChange={handleEmailChange} placeholder="Enter your email address" />
+      <input type="email" value={email} onChange={handleEmailChange} placeholder="email@address.com" />
       <label>Password</label>
-      <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
+      <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
       <button type="submit">Register</button>
     </form>
   );
