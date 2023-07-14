@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import './LoginForm.css';
-import { AuthProvider } from '../context/AuthProvider';
+import { AuthContext } from '../context/AuthProvider';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useContext(AuthProvider)
+  const { login } = useContext(AuthContext)
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
