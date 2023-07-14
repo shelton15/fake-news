@@ -13,6 +13,7 @@
   
 .login-form label {
     font-size: 16px;
+    margin-right: 300px;
     margin-bottom: 5px;
     color: #333;
     display: block; /* add this line */
