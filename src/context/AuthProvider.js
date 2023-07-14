@@ -45,6 +45,11 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     console.log(`Logging in with --==> ${base_url}/users/login`);
+    const data = JSON.stringify({
+        email: email,
+        password: password,
+      })
+      console.log(data)
     try {
       setLoading(true);
       fetch(`${base_url}/users/login`, {
@@ -52,21 +57,19 @@ export const AuthProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
+        body: data
       })
         .then((response) => response.json())
         .then((res) => {
-          const userInfo = res.data;
-          const token = res.token;
-          setUser(userInfo);
-          localStorage.setItem("token", token);
-          localStorage.setItem("isLoggedIn", true);
-          localStorage.setItem("id", userInfo.id);
-          setLoading(false);
-          console.log(userInfo);
+            console.log(res)
+        //   const userInfo = res.data;
+        //   const token = res.token;
+        //   setUser(userInfo);
+        //   localStorage.setItem("token", token);
+        //   localStorage.setItem("isLoggedIn", true);
+        //   localStorage.setItem("id", userInfo.id);
+        //   setLoading(false);
+        //   console.log(userInfo);
         })
 
         .catch((e) => {
