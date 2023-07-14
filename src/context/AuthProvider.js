@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useNavigate } from "react";
 import { base_url } from "../config";
 
 export const AuthContext = createContext();
@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate;
 
   useEffect(() => {
     setLoading(true);
@@ -35,7 +36,9 @@ export const AuthProvider = ({ children }) => {
       },
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {console.log(data)
+        navigate("/login")
+    })
       .catch((error) => console.error(error));
   };
 
@@ -108,7 +111,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, error, login, logout }}>
+    <AuthContext.Provider value={{ user, loading, error, login, logout, register}}>
       {children}
     </AuthContext.Provider>
   );

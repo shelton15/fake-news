@@ -41,8 +41,7 @@ function ImageTable() {
           <TableRow>
             <TableCell>Image ID</TableCell>
             <TableCell>Image URL</TableCell>
-            <TableCell>Image Description</TableCell>
-            <TableCell>Delete</TableCell>
+            <TableCell>Image Prediction</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

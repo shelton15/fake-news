@@ -9,16 +9,16 @@
     padding: 20px;
     width: 400px;
     margin: auto;
-  }
+}
   
-  .login-form label {
+.login-form label {
     font-size: 16px;
     margin-bottom: 5px;
     color: #333;
     display: block; /* add this line */
-  }
+}
   
-  .login-form input {
+.login-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -28,19 +28,19 @@
     font-size: 16px;
     color: #333;
     transition: border-color 0.3s ease-in-out;
-  }
+}
   
-  .login-form input:focus {
+.login-form input:focus {
     outline: none;
     border-color: #0074d9;
-  }
+}
   
-  .login-form input::placeholder { /* add this block */
+.login-form input::placeholder { /* add this block */
     color: #bbb;
     font-weight: normal;
-  }
+}
   
-  .login-form button[type="submit"] {
+.login-form button[type="submit"] {
     background-color: #5a98fd;
     color: #fff;
     border: none;
@@ -49,9 +49,16 @@
     font-weight: bold;
     padding: 10px 20px;
     transition: background-color 0.3s ease-in-out;
-  }
+}
   
-  .login-form button[type="submit"]:hover {
+.login-form button[type="submit"]:hover {
     background-color: #487df8;
     cursor: pointer;
-  }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* adjust as desired */
+}

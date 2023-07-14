@@ -6,11 +6,11 @@ import About from "./Pages/About";
 import Settings from "./Pages/Settings";
 import  LoginForm  from "./Pages/LoginForm";
 import Register from "./Pages/Register";
-
+import { AuthProvider } from "./context/AuthProvider";
 
 export default function App() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home/>}></Route>
@@ -20,6 +20,6 @@ export default function App() {
         <Route path="/register" exact element={<Register/>}></Route>
       </Routes>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   )
 }

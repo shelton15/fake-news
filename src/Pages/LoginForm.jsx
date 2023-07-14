@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './LoginForm.css';
+import { AuthProvider } from '../context/AuthProvider';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login } = useContext(AuthProvider)
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -15,17 +17,20 @@ const LoginForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    login(email, password)
     // Send POST request to login endpoint with email and password data
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
-      <label>Email</label>
-      <input type="email" value={email} onChange={handleEmailChange} placeholder="email@address.com" />
-      <label>Password</label>
-      <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-      <button type="submit">Login</button>
-    </form>
+    <div className="container">
+      <form onSubmit={handleSubmit} className="login-form">
+        <label>Email</label>
+        <input type="email" value={email} onChange={handleEmailChange} placeholder="Enter your email address" />
+        <label>Password</label>
+        <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 };
 
