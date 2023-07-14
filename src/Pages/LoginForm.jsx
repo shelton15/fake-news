@@ -26,10 +26,10 @@ const LoginForm = () => {
     <div className="container">
       <form onSubmit={handleSubmit} className="login-form">
         <label>Email</label>
-        <input type="email" value={email} onChange={handleEmailChange} placeholder="Enter your email address" />
+        <input type="email" value={email} onChange={handleEmailChange} placeholder="email@address.com" />
         <label>Password</label>
-        <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
-        <button type="submit">Login</button>
+        <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
+        <button type="submit">LOGIN</button>
         <p>Don't have an account? <Link to="/register">Register</Link></p>
       </form>
     </div>

@@ -37,7 +37,7 @@ const Register = () => {
             <input type="email" value={email} onChange={handleEmailChange} placeholder="email@address.com" />
             <label>Password</label>
             <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-            <button type="submit">Register</button>
+            <button type="submit">REGISTER</button>
             <p>Already have an Account? <Link to="/login">Login</Link></p>
         </form>
     </div>
