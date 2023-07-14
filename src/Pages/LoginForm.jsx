@@ -20,10 +20,10 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="login-form">
-      <label>Email:</label>
-      <input type="email" value={email} onChange={handleEmailChange} />
-      <label>Password:</label>
-      <input type="password" value={password} onChange={handlePasswordChange} />
+      <label>Email</label>
+      <input type="email" value={email} onChange={handleEmailChange} placeholder="Enter your email address" />
+      <label>Password</label>
+      <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
       <button type="submit">Login</button>
     </form>
   );

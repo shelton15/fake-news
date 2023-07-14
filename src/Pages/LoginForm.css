@@ -2,20 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* add this line */
+    justify-content: center;
     background-color: #f5f5f5;
     border: 2px solid #aaa;
     border-radius: 10px;
     padding: 20px;
     width: 400px;
-    margin: auto; /* add this line */
+    margin: auto;
   }
   
   .login-form label {
     font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #333;
+    display: block; /* add this line */
   }
   
   .login-form input {
@@ -33,6 +33,11 @@
   .login-form input:focus {
     outline: none;
     border-color: #0074d9;
+  }
+  
+  .login-form input::placeholder { /* add this block */
+    color: #bbb;
+    font-weight: normal;
   }
   
   .login-form button[type="submit"] {
