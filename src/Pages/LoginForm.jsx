@@ -30,8 +30,8 @@ const LoginForm = () => {
         <label>Password</label>
         <input type="password" value={password} onChange={handlePasswordChange} placeholder="Enter your password" />
         <button type="submit">Login</button>
+        <p>Don't have an account? <Link to="/register">Register</Link></p>
       </form>
-      <p>Don't have an account? <Link to="/register">Register</Link></p>
     </div>
   );
 };

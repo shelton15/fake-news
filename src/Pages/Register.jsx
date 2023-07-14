@@ -38,8 +38,8 @@ const Register = () => {
             <label>Password</label>
             <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
             <button type="submit">Register</button>
+            <p>Already have an Account? <Link to="/login">Login</Link></p>
         </form>
-      <p>Already have an Account? <Link to="/login">Login</Link></p>
     </div>
   );
 };
