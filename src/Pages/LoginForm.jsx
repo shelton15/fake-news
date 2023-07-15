@@ -25,9 +25,7 @@ const LoginForm = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="login-form">
-        <label>Email</label>
         <input type="email" value={email} onChange={handleEmailChange} placeholder="email@address.com" />
-        <label>Password</label>
         <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
         <button type="submit">LOGIN</button>
         <p>Don't have an account? <Link to="/register">Register</Link></p>
