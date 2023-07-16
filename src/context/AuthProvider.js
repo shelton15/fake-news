@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => {console.log(data)
-        Navigate("/login")
+        Navigate("/register")
     })
       .catch((error) => console.error(error));
   };
