@@ -22,10 +22,14 @@ const Register = () => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    register(username, email, password)
-    // Send POST request to register endpoint with username, email, and password data
+    try {
+      await register(username, email, password);
+      // Send POST request to register endpoint with username, email, and password data
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
